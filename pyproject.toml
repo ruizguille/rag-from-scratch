@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "rag-from-scratch"
+version = "0.1.0"
+description = ""
+authors = ["ruizguille <guillermo@codeawake.com>"]
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pdfminer-six = "^20231228"
+tqdm = "^4.66.4"
+tiktoken = "^0.7.0"
+nltk = "^3.8.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
