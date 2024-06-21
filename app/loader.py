@@ -2,7 +2,7 @@ import os
 from tqdm import tqdm
 from pdfminer.high_level import extract_text
 
-DATA_DIR = 'data'
+DATA_DIR = 'data/docs'
 
 def load_docs():
     docs = []

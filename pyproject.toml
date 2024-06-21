@@ -11,6 +11,8 @@ pdfminer-six = "^20231228"
 tqdm = "^4.66.4"
 tiktoken = "^0.7.0"
 nltk = "^3.8.1"
+nomic = "^3.0.33"
+numpy = "^2.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
