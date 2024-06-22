@@ -27,9 +27,8 @@ class VectorStore:
         with open(file_path, 'r') as f:
             self.store = json.load(f)
     
-    def query(self, vector, top_k=5):
+    def query(self, vector, top_k=10):
         vectors = [v['vector'] for v in self.store]
         similarities = cosine_similarity(vector, vectors)
-        print('Shape', similarities.shape)
         top_k_indices = np.argsort(similarities)[-top_k:][::-1]
         return [{**self.store[i], 'score': similarities[i]} for i in top_k_indices]
