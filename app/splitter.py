@@ -1,3 +1,5 @@
+# Inspired by LlamaIndex's Sentence Splitter
+# https://github.com/run-llama/llama_index/blob/main/llama-index-core/llama_index/core/node_parser/text/sentence.py
 import nltk
 import tiktoken
 from functools import partial

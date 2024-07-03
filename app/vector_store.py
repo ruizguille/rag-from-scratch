@@ -12,12 +12,9 @@ def cosine_similarity(query_vector, vectors):
 class VectorStore:
     def __init__(self):
         self.store = []
-
-    def reset(self):
-        self.store = []
     
-    def add(self, vectors):
-        self.store.extend(vectors)
+    def add(self, items):
+        self.store.extend(items)
     
     def save(self, file_path=VECTOR_STORE_FILEPATH):
         with open(file_path, 'w') as f:
@@ -28,7 +25,7 @@ class VectorStore:
             self.store = json.load(f)
     
     def query(self, vector, top_k=10):
-        vectors = [v['vector'] for v in self.store]
+        vectors = [item['vector'] for item in self.store]
         similarities = cosine_similarity(vector, vectors)
         top_k_indices = np.argsort(similarities)[-top_k:][::-1]
         return [{**self.store[i], 'score': similarities[i]} for i in top_k_indices]

@@ -21,7 +21,7 @@ def main():
     text_splitter = TextSplitter(chunk_size=512)
     print('\nSplitting documents into chunks')
     for i, doc in enumerate(docs):
-        doc_chunks = text_splitter(doc)
+        doc_chunks = text_splitter.split(doc)
         chunks += doc_chunks
         print(f'Doc {i+1}: {len(doc_chunks)} chunks')
     print('Total chunks:', len(chunks))
