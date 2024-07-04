@@ -8,7 +8,7 @@ SYSTEM_PROMPT = """You are an assistant that answers user questions about a coll
 USER_PROMPT = """
 Use the following pieces of context to answer the user question.
 You must only use the facts from the context to answer.
-If the answer cannot be found in the context, say that you don't have enough information to answer the question and provide any facts from the context that could be relevant to the answer.
+If the answer cannot be found in the context, say that you don't have enough information to answer the question and provide any relevant facts found in the context.
 Don't address \"the context\" explicitly in your answer, answer the question like it's your own knowledge.
 
 Context:
