@@ -31,7 +31,7 @@ The code is contained in the `app/` folder and organized into the following file
     poetry install
     ```
 
-2. Create a `.env` file in the backend folder copying the `.env.example` file provided and set the required environment variable:
+2. Create a `.env` file copying the `.env.example` file provided and set the required environment variable:
     - `GROQ_API_KEY`: Your Groq API key.
   
 ## Running the Application
